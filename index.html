@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazlo — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Hazlo, a habit tracking app for iOS. Your habit data stays on your device — developers cannot access it.">
+    <link rel="alternate" hreflang="en" href="https://mikeastwood.github.io/hazlo-privacy/">
+    <link rel="alternate" hreflang="es" href="https://mikeastwood.github.io/hazlo-privacy/">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #f0fdf4;
+            --text: #1a1a2e;
+            --text-secondary: #555;
+            --accent: #2D6A4F;
+            --accent-dark: #1B4332;
+            --border: #d1fae5;
+            --card-bg: #ecfdf5;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0a0a1a;
+                --bg-alt: #0d1f15;
+                --text: #e0e0e0;
+                --text-secondary: #a0a0a0;
+                --accent: #52B788;
+                --accent-dark: #74C69D;
+                --border: #1B4332;
+                --card-bg: #122e1e;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 2rem 0 1.5rem;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            letter-spacing: -0.5px;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .updated {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        /* Language toggle */
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .lang-btn {
+            padding: 0.4rem 1.2rem;
+            border: 2px solid var(--accent);
+            border-radius: 9999px;
+            background: transparent;
+            color: var(--accent-dark);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        /* Summary box */
+        .summary {
+            background: var(--card-bg);
+            border-left: 4px solid var(--accent);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2.5rem;
+            font-size: 0.95rem;
+        }
+
+        .summary strong {
+            color: var(--accent-dark);
+        }
+
+        /* Sections */
+        article section {
+            margin-bottom: 2rem;
+        }
+
+        article h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        article p {
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        article ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+        }
+
+        article li {
+            margin-bottom: 0.35rem;
+        }
+
+        a {
+            color: var(--accent-dark);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent-dark);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem 1rem 3rem;
+            }
+            header {
+                padding: 1.5rem 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Hazlo</div>
+            <h1 id="page-title">Privacy Policy</h1>
+            <p class="updated" id="page-date">Last updated: March 18, 2026</p>
+        </header>
+
+        <nav class="lang-toggle" aria-label="Language selection">
+            <button class="lang-btn active" id="btn-en" onclick="setLang('en')" aria-label="English">English</button>
+            <button class="lang-btn" id="btn-es" onclick="setLang('es')" aria-label="Espanol">Español</button>
+        </nav>
+
+        <!-- ==================== ENGLISH ==================== -->
+        <article id="content-en" lang="en">
+            <div class="summary">
+                <strong>Your habit data stays on your device.</strong>
+                Hazlo stores all your habits locally using SwiftData. Only pseudonymous leaderboard scores are shared via CloudKit if you opt in. There are no analytics, no advertising, and no third-party tracking.
+            </div>
+
+            <section>
+                <h2>1. Introduction</h2>
+                <p>Hazlo is a habit tracking app for iOS designed with privacy as a core principle. The app works 100% offline, stores your data locally on your device, and only shares minimal, pseudonymous data if you explicitly opt into social features. This privacy policy explains what data the app stores, how it is stored, and your rights regarding that data.</p>
+            </section>
+
+            <section>
+                <h2>2. What Data We Store</h2>
+                <p>Hazlo stores the following data that you create and generate through normal use of the app:</p>
+                <ul>
+                    <li><strong>Habits:</strong> Name, icon, color, frequency, schedule, goal type, goal value, category, creation date.</li>
+                    <li><strong>Completions:</strong> Completion timestamps, values (for quantitative habits), optional notes.</li>
+                    <li><strong>Categories:</strong> Name, icon, color, sort order.</li>
+                    <li><strong>User Profile:</strong> Display name, avatar emoji, friend code, level, XP.</li>
+                    <li><strong>Badges:</strong> Badge identifier, unlock date, category.</li>
+                    <li><strong>Weekly Scores:</strong> Week date, completion rate, streak count, perfect days (used for leaderboards if you opt in).</li>
+                    <li><strong>Streak Freezes:</strong> Activation date, associated habit.</li>
+                    <li><strong>Reminders:</strong> Per-habit reminder times and days.</li>
+                </ul>
+                <p>All of this data is created by you through your use of the app. Hazlo does not collect data from external sources or third parties.</p>
+            </section>
+
+            <section>
+                <h2>3. How Data Is Stored</h2>
+                <p>Your habit data is stored in two places:</p>
+                <ul>
+                    <li><strong>Locally on your device</strong> using Apple's SwiftData framework. This data is available even when you have no internet connection.</li>
+                    <li><strong>In your private iCloud account</strong> via Apple's CloudKit service, enabling sync across all your Apple devices signed into the same Apple ID.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. CloudKit and iCloud</h2>
+                <p>When iCloud is enabled on your device, your data is synced to Apple's CloudKit servers. Important details:</p>
+                <ul>
+                    <li><strong>Private Database:</strong> All your habit data, completions, categories, badges, and profile are stored in your private CloudKit database. Only you can access it.</li>
+                    <li><strong>Public Database:</strong> If you opt into leaderboards (Settings > Leaderboard), only the following pseudonymous data is published: display name, avatar emoji, friend code, weekly completion rate, streak count, and perfect days. <strong>Your habit names, details, and completion data are never shared.</strong></li>
+                    <li>Data is <strong>encrypted in transit and at rest</strong> by Apple.</li>
+                    <li>The developers of Hazlo <strong>cannot read, access, or view</strong> your private habit data.</li>
+                    <li>Apple's infrastructure handles all data storage and encryption. Apple's own privacy policy applies: <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener">apple.com/privacy</a></li>
+                </ul>
+                <p>If you disable iCloud for Hazlo or do not opt into leaderboards, no data leaves your device.</p>
+            </section>
+
+            <section>
+                <h2>5. Apple Health Integration</h2>
+                <p>Hazlo can optionally read data from Apple Health to auto-complete habits linked to health metrics (steps, exercise minutes, water intake, sleep, etc.). Important details:</p>
+                <ul>
+                    <li>Hazlo requests <strong>read-only</strong> access to Health data. It never writes to Apple Health.</li>
+                    <li>Health permissions are requested <strong>only</strong> for the specific metrics you choose to link.</li>
+                    <li><strong>Raw health values are never stored</strong> in Hazlo's database. Only a boolean flag ("habit was auto-completed") and a timestamp are recorded.</li>
+                    <li>Health data <strong>never leaves your device</strong> — it is not synced to iCloud, CloudKit, or any server.</li>
+                    <li>Health data <strong>never appears</strong> in logs, analytics, or crash reports.</li>
+                    <li>Health integration is entirely optional. The app works fully without it.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Local-Only Settings</h2>
+                <p>The following preferences are stored locally on your device using UserDefaults and are <strong>not synced via CloudKit</strong>:</p>
+                <ul>
+                    <li>Streak freeze count</li>
+                    <li>Daily reminder time</li>
+                    <li>Weekly report enabled/disabled</li>
+                    <li>Leaderboard opt-in</li>
+                    <li>HealthKit enabled/disabled</li>
+                    <li>App theme and color scheme</li>
+                    <li>Week start day preference</li>
+                    <li>Notification preferences</li>
+                </ul>
+                <p>These settings remain on the device where they were configured.</p>
+            </section>
+
+            <section>
+                <h2>7. What We Do Not Collect</h2>
+                <p>Hazlo does <strong>not</strong> use or include:</p>
+                <ul>
+                    <li>Analytics SDKs (no Firebase, no Mixpanel, no Google Analytics)</li>
+                    <li>Crash reporting SDKs (no Crashlytics, no Sentry)</li>
+                    <li>Advertising frameworks or identifiers</li>
+                    <li>Location services</li>
+                    <li>Access to contacts or photos</li>
+                    <li>Third-party data sharing of any kind</li>
+                    <li>Cross-app or cross-site tracking</li>
+                </ul>
+                <p>No data is sent to any server other than Apple's iCloud infrastructure for the sole purpose of syncing your data across your devices (and publishing pseudonymous leaderboard scores if you opt in).</p>
+            </section>
+
+            <section>
+                <h2>8. Data Deletion</h2>
+                <p>You have full control over your data:</p>
+                <ul>
+                    <li><strong>Delete All Data</strong> in Settings > Data Management removes all habits, completions, categories, badges, profile data, and resets all preferences. This also removes your data from CloudKit.</li>
+                    <li><strong>Delete individual habits</strong> directly within the app. Deletions sync across all your devices.</li>
+                    <li><strong>Uninstalling the app</strong> removes all local data from that device. iCloud data persists in your iCloud account until you manually delete it through iCloud settings.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>9. Children's Privacy</h2>
+                <p>Hazlo is rated 4+ and is suitable for users of all ages. The app does not require accounts or registration. Social features (leaderboards, friend codes) are optional and pseudonymous — no real names or personal information are required. There is no special data collection for children.</p>
+            </section>
+
+            <section>
+                <h2>10. Health Disclaimer</h2>
+                <p>Hazlo is not a medical device. Habit tracking is for informational and motivational purposes only. Consult a healthcare professional for medical advice.</p>
+            </section>
+
+            <section>
+                <h2>11. Your Rights by Jurisdiction</h2>
+
+                <p><strong>European Union / EEA (GDPR):</strong> Your data is processed on-device and synced through Apple's CloudKit to your private iCloud container. The developer does not have server-side access to your data. Data controller: Mike Pulgar Olguin, individual developer, Spain. Legal basis: legitimate interest (app functionality). To exercise your GDPR rights (access, rectification, erasure, portability, objection), contact: <a href="mailto:michael@mikeastwood.com">michael@mikeastwood.com</a>. Supervisory authority: <a href="https://www.aepd.es" target="_blank" rel="noopener">AEPD</a>, C/ Jorge Juan 6, 28001 Madrid, Spain.</p>
+
+                <p><strong>United Kingdom (UK GDPR):</strong> UK residents have the same rights as under GDPR. Supervisory authority: <a href="https://ico.org.uk" target="_blank" rel="noopener">ICO</a>, Wycliffe House, Water Lane, Wilmslow, SK9 5AF, United Kingdom.</p>
+
+                <p><strong>California, USA (CCPA/CPRA):</strong> We do not sell personal information. We do not share personal information for cross-context behavioral advertising. We do not use sensitive personal information for unauthorized purposes.</p>
+
+                <p><strong>Brazil (LGPD), Canada (PIPEDA), South Africa (POPIA), Japan (APPI):</strong> Your data rights are respected under all applicable jurisdictions. Since the developer cannot access your CloudKit data, your rights to access, correction, deletion, and portability are exercised directly through the app and your iCloud settings.</p>
+            </section>
+
+            <section>
+                <h2>12. Changes to This Policy</h2>
+                <p>If we make changes to this privacy policy, we will communicate them through an app update. The effective date at the top of this policy will be updated accordingly. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+            </section>
+
+            <section>
+                <h2>13. Contact</h2>
+                <p>If you have questions about this privacy policy or your data:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:michael@mikeastwood.com">michael@mikeastwood.com</a></li>
+                </ul>
+                <p>Developer: Mike Pulgar Olguin (individual developer), Spain.</p>
+            </section>
+        </article>
+
+        <!-- ==================== SPANISH ==================== -->
+        <article id="content-es" lang="es" class="hidden">
+            <div class="summary">
+                <strong>Tus datos de habitos permanecen en tu dispositivo.</strong>
+                Hazlo almacena todos tus habitos localmente usando SwiftData. Solo se comparten puntuaciones pseudonimas de tabla de clasificacion via CloudKit si decides participar. No hay analitica, ni publicidad, ni rastreo de terceros.
+            </div>
+
+            <section>
+                <h2>1. Introduccion</h2>
+                <p>Hazlo es una app de seguimiento de habitos para iOS disenada con la privacidad como principio fundamental. La app funciona 100% sin conexion, almacena tus datos localmente en tu dispositivo, y solo comparte datos minimos y pseudonimos si decides activar las funciones sociales. Esta politica de privacidad explica que datos almacena la app, como se almacenan y tus derechos sobre ellos.</p>
+            </section>
+
+            <section>
+                <h2>2. Que datos almacenamos</h2>
+                <p>Hazlo almacena los siguientes datos que tu creas y generas mediante el uso normal de la app:</p>
+                <ul>
+                    <li><strong>Habitos:</strong> Nombre, icono, color, frecuencia, horario, tipo de meta, valor de meta, categoria, fecha de creacion.</li>
+                    <li><strong>Completaciones:</strong> Marcas de tiempo, valores (para habitos cuantitativos), notas opcionales.</li>
+                    <li><strong>Categorias:</strong> Nombre, icono, color, orden.</li>
+                    <li><strong>Perfil de usuario:</strong> Nombre para mostrar, emoji de avatar, codigo de amigo, nivel, XP.</li>
+                    <li><strong>Insignias:</strong> Identificador, fecha de desbloqueo, categoria.</li>
+                    <li><strong>Puntuaciones semanales:</strong> Fecha, tasa de completacion, cuenta de racha, dias perfectos (para tablas de clasificacion si decides participar).</li>
+                    <li><strong>Congelaciones de racha:</strong> Fecha de activacion, habito asociado.</li>
+                    <li><strong>Recordatorios:</strong> Horarios y dias de recordatorio por habito.</li>
+                </ul>
+                <p>Todos estos datos son creados por ti mediante tu uso de la app. Hazlo no recopila datos de fuentes externas ni de terceros.</p>
+            </section>
+
+            <section>
+                <h2>3. Como se almacenan los datos</h2>
+                <p>Tus datos de habitos se almacenan en dos lugares:</p>
+                <ul>
+                    <li><strong>Localmente en tu dispositivo</strong> usando el framework SwiftData de Apple. Estos datos estan disponibles incluso sin conexion a internet.</li>
+                    <li><strong>En tu cuenta privada de iCloud</strong> via el servicio CloudKit de Apple, permitiendo sincronizacion entre todos tus dispositivos Apple con el mismo Apple ID.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. CloudKit e iCloud</h2>
+                <p>Cuando iCloud esta habilitado en tu dispositivo, tus datos se sincronizan con los servidores CloudKit de Apple. Detalles importantes:</p>
+                <ul>
+                    <li><strong>Base de datos privada:</strong> Todos tus datos de habitos, completaciones, categorias, insignias y perfil se almacenan en tu base de datos privada de CloudKit. Solo tu puedes acceder a ellos.</li>
+                    <li><strong>Base de datos publica:</strong> Si decides participar en las tablas de clasificacion (Ajustes > Tabla de clasificacion), solo se publican los siguientes datos pseudonimos: nombre para mostrar, emoji de avatar, codigo de amigo, tasa de completacion semanal, cuenta de racha y dias perfectos. <strong>Los nombres de tus habitos, detalles y datos de completacion nunca se comparten.</strong></li>
+                    <li>Los datos estan <strong>cifrados en transito y en reposo</strong> por Apple.</li>
+                    <li>Los desarrolladores de Hazlo <strong>no pueden leer, acceder ni ver</strong> tus datos privados de habitos.</li>
+                    <li>La infraestructura de Apple maneja todo el almacenamiento y cifrado. La politica de privacidad de Apple aplica: <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener">apple.com/privacy</a></li>
+                </ul>
+                <p>Si desactivas iCloud para Hazlo o no participas en las tablas de clasificacion, ningun dato sale de tu dispositivo.</p>
+            </section>
+
+            <section>
+                <h2>5. Integracion con Apple Health</h2>
+                <p>Hazlo puede leer datos de Apple Health de forma opcional para auto-completar habitos vinculados a metricas de salud (pasos, minutos de ejercicio, consumo de agua, sueno, etc.). Detalles importantes:</p>
+                <ul>
+                    <li>Hazlo solicita acceso de <strong>solo lectura</strong> a datos de Health. Nunca escribe en Apple Health.</li>
+                    <li>Los permisos se solicitan <strong>unicamente</strong> para las metricas especificas que elijas vincular.</li>
+                    <li><strong>Los valores crudos de salud nunca se almacenan</strong> en la base de datos de Hazlo. Solo se registra un indicador ("habito auto-completado") y una marca de tiempo.</li>
+                    <li>Los datos de salud <strong>nunca salen de tu dispositivo</strong> — no se sincronizan con iCloud, CloudKit ni ningun servidor.</li>
+                    <li>Los datos de salud <strong>nunca aparecen</strong> en logs, analiticas ni reportes de errores.</li>
+                    <li>La integracion con Health es completamente opcional. La app funciona completamente sin ella.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Configuraciones solo locales</h2>
+                <p>Las siguientes preferencias se almacenan localmente en tu dispositivo usando UserDefaults y <strong>no se sincronizan via CloudKit</strong>:</p>
+                <ul>
+                    <li>Cantidad de congelaciones de racha</li>
+                    <li>Hora de recordatorio diario</li>
+                    <li>Reporte semanal activado/desactivado</li>
+                    <li>Participacion en tabla de clasificacion</li>
+                    <li>HealthKit activado/desactivado</li>
+                    <li>Tema de la app y esquema de colores</li>
+                    <li>Dia de inicio de semana</li>
+                    <li>Preferencias de notificacion</li>
+                </ul>
+                <p>Estas configuraciones permanecen en el dispositivo donde fueron configuradas.</p>
+            </section>
+
+            <section>
+                <h2>7. Que no recopilamos</h2>
+                <p>Hazlo <strong>no</strong> usa ni incluye:</p>
+                <ul>
+                    <li>SDKs de analiticas (no Firebase, no Mixpanel, no Google Analytics)</li>
+                    <li>SDKs de reportes de errores (no Crashlytics, no Sentry)</li>
+                    <li>Frameworks de publicidad ni identificadores</li>
+                    <li>Servicios de ubicacion</li>
+                    <li>Acceso a contactos o fotos</li>
+                    <li>Comparticion de datos con terceros de ningun tipo</li>
+                    <li>Rastreo entre apps o entre sitios web</li>
+                </ul>
+                <p>Ningun dato se envia a ningun servidor que no sea la infraestructura de iCloud de Apple con el unico proposito de sincronizar tus datos entre tus dispositivos (y publicar puntuaciones pseudonimas si decides participar).</p>
+            </section>
+
+            <section>
+                <h2>8. Eliminacion de datos</h2>
+                <p>Tienes control total sobre tus datos:</p>
+                <ul>
+                    <li><strong>Eliminar todos los datos</strong> en Ajustes > Gestion de datos elimina todos los habitos, completaciones, categorias, insignias, datos de perfil y restablece todas las preferencias. Esto tambien elimina tus datos de CloudKit.</li>
+                    <li><strong>Eliminar habitos individuales</strong> directamente dentro de la app. Las eliminaciones se sincronizan entre todos tus dispositivos.</li>
+                    <li><strong>Desinstalar la app</strong> elimina todos los datos locales de ese dispositivo. Los datos de iCloud persisten en tu cuenta de iCloud hasta que los elimines manualmente desde los ajustes de iCloud.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>9. Privacidad de menores</h2>
+                <p>Hazlo esta clasificada para 4+ y es apta para usuarios de todas las edades. La app no requiere cuentas ni registro. Las funciones sociales (tablas de clasificacion, codigos de amigo) son opcionales y pseudonimas — no se requieren nombres reales ni informacion personal.</p>
+            </section>
+
+            <section>
+                <h2>10. Aviso de salud</h2>
+                <p>Hazlo no es un dispositivo medico. El seguimiento de habitos es solo con fines informativos y motivacionales. Consulta a un profesional de la salud para consejo medico.</p>
+            </section>
+
+            <section>
+                <h2>11. Tus derechos por jurisdiccion</h2>
+
+                <p><strong>Union Europea / EEE (RGPD):</strong> Tus datos se procesan en el dispositivo y se sincronizan a traves de CloudKit de Apple a tu contenedor privado de iCloud. El desarrollador no tiene acceso del lado del servidor a tus datos. Responsable del tratamiento: Mike Pulgar Olguin, desarrollador independiente, Espana. Base legal: interes legitimo (funcionalidad de la app). Para ejercer tus derechos RGPD (acceso, rectificacion, supresion, portabilidad, oposicion), contacta: <a href="mailto:michael@mikeastwood.com">michael@mikeastwood.com</a>. Autoridad de control: <a href="https://www.aepd.es" target="_blank" rel="noopener">AEPD</a>, C/ Jorge Juan 6, 28001 Madrid, Espana.</p>
+
+                <p><strong>Reino Unido (UK GDPR):</strong> Los residentes del Reino Unido tienen los mismos derechos que bajo el RGPD. Autoridad supervisora: <a href="https://ico.org.uk" target="_blank" rel="noopener">ICO</a>, Wycliffe House, Water Lane, Wilmslow, SK9 5AF, Reino Unido.</p>
+
+                <p><strong>California, EEUU (CCPA/CPRA):</strong> No vendemos informacion personal. No compartimos informacion personal para publicidad conductual. No usamos informacion personal sensible para propositos no autorizados.</p>
+
+                <p><strong>Brasil (LGPD), Canada (PIPEDA), Sudafrica (POPIA), Japon (APPI):</strong> Tus derechos sobre tus datos se respetan bajo todas las jurisdicciones aplicables. Dado que el desarrollador no puede acceder a tus datos de CloudKit, tus derechos de acceso, correccion, eliminacion y portabilidad se ejercen directamente a traves de la app y tus ajustes de iCloud.</p>
+            </section>
+
+            <section>
+                <h2>12. Cambios a esta politica</h2>
+                <p>Si realizamos cambios a esta politica de privacidad, los comunicaremos mediante una actualizacion de la app. La fecha efectiva al inicio de esta politica se actualizara en consecuencia. El uso continuado de la app despues de los cambios constituye aceptacion de la politica actualizada.</p>
+            </section>
+
+            <section>
+                <h2>13. Contacto</h2>
+                <p>Si tienes preguntas sobre esta politica de privacidad o tus datos:</p>
+                <ul>
+                    <li><strong>Correo:</strong> <a href="mailto:michael@mikeastwood.com">michael@mikeastwood.com</a></li>
+                </ul>
+                <p>Desarrollador: Mike Pulgar Olguin (desarrollador independiente), Espana.</p>
+            </section>
+        </article>
+
+        <footer>
+            <p>&copy; 2026 Mike Pulgar Olguin. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('content-es').classList.toggle('hidden', lang !== 'es');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+            document.getElementById('page-title').textContent = lang === 'en' ? 'Privacy Policy' : 'Politica de Privacidad';
+            document.getElementById('page-date').textContent = lang === 'en'
+                ? 'Last updated: March 18, 2026'
+                : 'Ultima actualizacion: 18 de marzo de 2026';
+            document.documentElement.lang = lang;
+        }
+
+        // Auto-detect language
+        if (navigator.language && navigator.language.startsWith('es')) {
+            setLang('es');
+        }
+    </script>
+</body>
+</html>
